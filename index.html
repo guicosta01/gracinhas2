@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Uma carta especial para você">
+    <title>Para Você 💌</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Tela Inicial -->
+    <div id="tela-inicial" class="container">
+        <div class="conteudo-inicial">
+            <h1 class="titulo-principal">Uma mensagem especial</h1>
+            <p class="subtitulo">Preparei algo com carinho para você...</p>
+            <button id="btn-abrir" class="btn-principal">
+                💌 Abrir carta
+            </button>
+        </div>
+    </div>
+
+    <!-- Tela da Carta -->
+    <div id="tela-carta" class="container hidden">
+        <div class="carta-container">
+            <!-- Carta com efeito de digitação -->
+            <div class="carta-conteudo">
+                <div class="carta-papel">
+                    <p id="texto-carta" class="texto-digitado"></p>
+                    <p class="assinatura">Com amor ❤️</p>
+                </div>
+            </div>
+
+            <!-- Contador de tempo -->
+            <div class="contador-container">
+                <h2 class="contador-titulo">Nosso tempo juntos</h2>
+                <div class="contador-tempo">
+                    <div class="tempo-unidade">
+                        <span id="dias" class="numero">0</span>
+                        <span class="label">dias</span>
+                    </div>
+                    <div class="tempo-unidade">
+                        <span id="horas" class="numero">0</span>
+                        <span class="label">horas</span>
+                    </div>
+                    <div class="tempo-unidade">
+                        <span id="minutos" class="numero">0</span>
+                        <span class="label">minutos</span>
+                    </div>
+                    <div class="tempo-unidade">
+                        <span id="segundos" class="numero">0</span>
+                        <span class="label">segundos</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spotify Player -->
+            <div class="spotify-container">
+                <h3 class="spotify-titulo">Nossa música ✨</h3>
+                <div class="spotify-wrapper">
+                    <iframe 
+                        id="spotify-player"
+                        style="border-radius:12px" 
+                        src="https://open.spotify.com/embed/track/3JvKfv6T31zO0ini8iNItO?utm_source=generator&autoplay=1" 
+                        width="100%" 
+                        height="152" 
+                        frameBorder="0" 
+                        allowfullscreen="" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <p class="spotify-nota">Clique no play para ouvir enquanto lê 🎵</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
