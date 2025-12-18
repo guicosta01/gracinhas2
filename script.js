@@ -3,20 +3,19 @@
    ========================================= */
 
 // Data de início do relacionamento (EDITE AQUI)
-const DATA_INICIO = new Date('2025-09-06T00:00:00');
+const DATA_INICIO = new Date('2025-09-06T20:10:00');
 
 // Texto da carta (EDITE AQUI)
-const TEXTO_CARTA = `Oi, amor!
+const TEXTO_CARTA = `Amor, fiz essa surpresa pra você, pra termos um momento de paz no meio das brigas 🕊️. Fiz pra reforçar o meu amor por você ❤️. Você é incrível, linda, e eu sou muito orgulhoso de ter você do meu lado. Sei que ainda vamos chegar muito longe juntos 🚀. Apesar dos traumas, inseguranças e problemas, sei que com você ao meu lado tudo é possível 💪❤️. Eu te escolhi hoje e sempre 💍, e não tinha como ser diferente.
 
-Preparei essa carta especial para te mostrar o quanto você é importante para mim.
-
-Cada dia ao seu lado é uma descoberta, cada momento juntos é uma lembrança que guardo com carinho no coração.
-
-Você ilumina meus dias e torna tudo mais leve e bonito. Obrigado(a) por existir e fazer parte da minha vida.
-
-Nosso tempo juntos é precioso, e quero que você saiba que você é muito especial para mim. ❤️
-
-Te amo hoje e sempre!`;
+Para: Anny, 
+Minha namorada,
+Minha melhor amiga, 
+Minha vida,
+Minha paz,
+Meu tudo,
+O amor da minha vida, 
+Meu maior amor.`;
 
 // Velocidade de digitação em milissegundos (EDITE AQUI se quiser mais rápido ou lento)
 const VELOCIDADE_DIGITACAO = 50;

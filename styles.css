@@ -2,15 +2,15 @@
    VARIÁVEIS CSS
    ========================================= */
 :root {
-    --cor-fundo: #fff5f7;
-    --cor-primaria: #ffb6c1;
-    --cor-secundaria: #ffd1dc;
-    --cor-texto: #4a4a4a;
-    --cor-texto-claro: #6b6b6b;
-    --cor-destaque: #ff8fab;
+    --cor-fundo: #0f1419;
+    --cor-primaria: #1e3a5f;
+    --cor-secundaria: #2c5282;
+    --cor-texto: #e2e8f0;
+    --cor-texto-claro: #a0aec0;
+    --cor-destaque: #4299e1;
     --cor-branco: #ffffff;
-    --sombra-suave: 0 8px 32px rgba(255, 182, 193, 0.2);
-    --sombra-media: 0 12px 48px rgba(255, 182, 193, 0.3);
+    --sombra-suave: 0 8px 32px rgba(0, 0, 0, 0.3);
+    --sombra-media: 0 12px 48px rgba(0, 0, 0, 0.5);
     
     --fonte-principal: 'Poppins', sans-serif;
     --fonte-script: 'Dancing Script', cursive;
@@ -27,7 +27,7 @@
 
 body {
     font-family: var(--fonte-principal);
-    background: linear-gradient(135deg, #fff5f7 0%, #ffe4e9 100%);
+    background: linear-gradient(135deg, #0f1419 0%, #1a202c 100%);
     color: var(--cor-texto);
     min-height: 100vh;
     overflow-x: hidden;
@@ -111,12 +111,12 @@ body {
 }
 
 .carta-papel {
-    background: var(--cor-branco);
+    background: #1a202c;
     padding: clamp(2rem, 5vw, 4rem);
     border-radius: 20px;
     box-shadow: var(--sombra-media);
     position: relative;
-    border: 1px solid rgba(255, 182, 193, 0.2);
+    border: 1px solid rgba(66, 153, 225, 0.3);
 }
 
 .carta-papel::before {
@@ -127,9 +127,9 @@ body {
     transform: translateX(-50%);
     width: 60px;
     height: 60px;
-    background: var(--cor-primaria);
+    background: var(--cor-destaque);
     border-radius: 50%;
-    opacity: 0.2;
+    opacity: 0.15;
 }
 
 .texto-digitado {
@@ -153,12 +153,13 @@ body {
    CONTADOR
    ========================================= */
 .contador-container {
-    background: var(--cor-branco);
+    background: #1a202c;
     padding: 2.5rem;
     border-radius: 20px;
     box-shadow: var(--sombra-suave);
     margin-bottom: 3rem;
     text-align: center;
+    border: 1px solid rgba(66, 153, 225, 0.2);
 }
 
 .contador-titulo {
@@ -205,11 +206,12 @@ body {
    SPOTIFY
    ========================================= */
 .spotify-container {
-    background: var(--cor-branco);
+    background: #1a202c;
     padding: 2.5rem;
     border-radius: 20px;
     box-shadow: var(--sombra-suave);
     text-align: center;
+    border: 1px solid rgba(66, 153, 225, 0.2);
 }
 
 .spotify-titulo {
@@ -277,6 +279,46 @@ body {
 }
 
 /* =========================================
+   GALERIA DE FOTOS
+   ========================================= */
+.galeria-container {
+    margin-bottom: 3rem;
+}
+
+.galeria-fotos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.foto-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    aspect-ratio: 1;
+}
+
+.foto-item:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 32px rgba(66, 153, 225, 0.4);
+}
+
+.foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.foto-item:hover .foto {
+    transform: scale(1.1);
+}
+
+/* =========================================
    RESPONSIVIDADE
    ========================================= */
 @media (max-width: 768px) {
@@ -292,6 +334,11 @@ body {
     .contador-container,
     .spotify-container {
         padding: 1.5rem;
+    }
+    
+    .galeria-fotos {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 }
 
